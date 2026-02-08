@@ -29,8 +29,11 @@ namespace CSharplearning
             Console.WriteLine("Тема 7: ForEachEL");
             new ForEachEL();
 
-            Console.WriteLine("Тема 7: Generics");
+            Console.WriteLine("Тема 8: Generics");
             new Generics();
+
+            Console.WriteLine("Тема 9: Functions");
+            new functionsik();
         }
     }
 };
