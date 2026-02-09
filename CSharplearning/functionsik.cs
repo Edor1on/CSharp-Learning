@@ -20,6 +20,7 @@ namespace CSharplearning
             Summa(5, 8);
 
             int IOP = QWER(15, 15);
+            
         }
 
         public static void Print(string word)
