@@ -41,7 +41,7 @@ namespace CSharplearning
                 stram.Write(array);
             }
 
-
+            // Open and Read from file
             Console.WriteLine("Read in file");
             using(FileStream stream = File.OpenRead("info.txt"))
             {

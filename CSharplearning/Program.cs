@@ -35,8 +35,11 @@ namespace CSharplearning
             //Console.WriteLine("Тема 9: Functions");
             //new functionsik();
 
-            Console.WriteLine("Тема 10: Strings And Files");
-            new StringsAndFiles();
+            //Console.WriteLine("Тема 10: Strings And Files");
+            //new StringsAndFiles();
+
+            Console.WriteLine("Тема 11: Try_catch");
+            new try_catch();
         }
     }
 };
