@@ -10,10 +10,11 @@ namespace CSharplearning
         {
             string word = "Hello";
             word += "!!!";
+            //word = String.Concat(word, "!!!");
 
             char[] words = { 'H', 'I' };
 
-            Console.WriteLine(String.Compare(word, "LLo"));  // 0 - рівні обидваб 1 - LLo більше за зміну стрінга -1 - LLo менше за ту зміну
+            Console.WriteLine(String.Compare(word, "LLo"));  // 0 - рівні обидва 1 - LLo більше за зміну стрінга -1 - LLo менше за ту зміну
 
 
 
@@ -35,10 +36,10 @@ namespace CSharplearning
             // create and write in file
             Console.Write("Enter text to file: ");
             string text = Console.ReadLine();
-            using (FileStream stram = new FileStream("info.txt", FileMode.OpenOrCreate))
+            using (FileStream stream = new FileStream("info.txt", FileMode.OpenOrCreate))
             {
                 byte[] array = System.Text.Encoding.Default.GetBytes(text);
-                stram.Write(array);
+                stream.Write(array);
             }
 
             // Open and Read from file

@@ -37,6 +37,10 @@ namespace CSharplearning
 
             int user1, user2;
 
+            // особливі типи
+            object user3;
+            dynamic user4;
+
             user1 = Convert.ToInt32(Console.ReadLine());
             user2 = Convert.ToInt32(Console.ReadLine());
 

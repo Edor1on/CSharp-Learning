@@ -33,7 +33,7 @@ namespace CSharplearning
             }
             else
             {
-                Console.WriteLine("low than five");
+                Console.WriteLine("low than 1");
             }
 
 
