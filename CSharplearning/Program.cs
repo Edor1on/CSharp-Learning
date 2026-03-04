@@ -44,8 +44,9 @@ namespace CSharplearning
 
 
             Console.WriteLine("Тема 11: OOP");
-            OOP Bot = new OOP();
-            Bot.SetValues("Bot", 250, 1500, 2.0F, new byte[] { 0, 0, 0 });  // for private - треба юзати функції для того класу
+
+            RobotOOP Bot = new RobotOOP("Bot", 250, 1500, 2.0F, new byte[] { 0, 0, 0 });
+            //Bot.SetValues("Bot", 250, 1500, 2.0F, new byte[] { 0, 0, 0 });  // for private - треба юзати функції для того класу    також через конструктор
             //Bot.name = "Bot";
             //Bot.weight = 250;
             //Bot.power = 1500;
@@ -57,23 +58,32 @@ namespace CSharplearning
             //Console.WriteLine("Version: " + Bot.version);
             //Console.WriteLine("Coordinates: " + string.Join(", ", Bot.coordinates));
 
-            Bot.printValues();
+            //Bot.printValues(); - не потрібне через контруктор
 
 
-            OOP Killer = new OOP();
-            Killer.SetValues("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 });   // for private - треба юзати функції для того класу
+            RobotOOP Killer = new RobotOOP("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 });
+            //Killer.SetValues("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 });   // for private - треба юзати функції для того класу   також через конструктор для зручності
             //Killer.name = "Killer";
             //Killer.weight = 300;
             //Killer.power = 15000;
             //Killer.version = 8.0F;
             //Killer.coordinates = new byte[] { 2, 2, 245 };
-                                                            //public - Бо легко будь де можна доступитися
+            //public - Бо легко будь де можна доступитися
             //Console.WriteLine("Name: " + Killer.name);
             //Console.WriteLine("Weight: " + Killer.weight);
             //Console.WriteLine("Version: " + Killer.version);
             //Console.WriteLine("Coordinates: " + string.Join(", ", Killer.coordinates));
 
-            Killer.printValues();
+            //Killer.printValues();  - не потрібне через контруктор
+
+            RobotOOP Adrian = new RobotOOP();
+
+            RobotOOP.value = 15;
+            Console.WriteLine(RobotOOP.value);
+
+            RobotOOP.PrintSOmeText();
+
+            RobotOOP.PrintCount();
 
         }
     }
