@@ -24,8 +24,8 @@ namespace CSharplearning
 
         public RobotOOP (string _name, short _weight, int _power, float _version, byte[] _coordinates)
         {
-            SetValues(_name, _weight, _power, _version, _coordinates);
-            printValues();
+            this.SetValues(_name, _weight, _power, _version, _coordinates);
+            this.printValues();
             count++;
         }
 
@@ -49,24 +49,45 @@ namespace CSharplearning
 
 
         // methods
-        public void SetValues(string _name, short _weight, int _power, float _version, byte[] _coordinates)
+        public void SetValues(string name, short weight, int power, float version, byte[] coordinates)
         {
-            name = _name;
-            weight = _weight;
-            power = _power;
-            version = _version;
-            coordinates = _coordinates;
+            this.name = name;
+            this.weight = weight;
+            this.power = power;
+            this.version = version;
+            this.coordinates = coordinates;
         }
 
         public void printValues()
         {
-            Console.WriteLine(name + ": weight: " + weight + ", power: " + power + ", version " + version + ", coordinates: ");
-            foreach(byte el in coordinates){
+            Console.WriteLine(this.name + ": weight: " + this.weight + ", power: " + this.power + ", version " + this.version + ", coordinates: ");
+            foreach(byte el in this.coordinates){
                 Console.Write(el + " - ");
             }
         Console.WriteLine("");
 
+        }
 
+
+        // Аксесори get set
+
+        public int Width { private get; set; }
+
+        public short Weight
+        {
+            get
+            {
+                Console.WriteLine("Result of waight: ");
+                return this.weight;
+            }
+            set
+            {
+                if (value < 1)
+                {
+                    weight = 0;
+                }
+                this.Weight = value;
+            }
         }
     }
 }

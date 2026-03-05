@@ -85,6 +85,12 @@ namespace CSharplearning
 
             RobotOOP.PrintCount();
 
+            RobotOOP Botosu = new RobotOOP();
+            Botosu.Weight = -3;
+            //Botosu.Width = 135; // помилка бо set є private
+            Console.WriteLine(Botosu.Width); // бо get is publiv
+            Console.WriteLine($"This is not courect value of weight: {Botosu.Weight}, try again");
+
         }
     }
 };
