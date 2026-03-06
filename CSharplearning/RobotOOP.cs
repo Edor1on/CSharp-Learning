@@ -71,7 +71,7 @@ namespace CSharplearning
 
         // Аксесори get set
 
-        public int Width { private get; set; }
+        public int Width { get; private set; }
 
         public short Weight
         {
@@ -82,11 +82,14 @@ namespace CSharplearning
             }
             set
             {
-                if (value < 1)
-                {
-                    weight = 0;
-                }
-                this.Weight = value;
+                    if (value < 1)
+                    {
+                        this.weight = 0;
+                    }
+                    else // Додаємо else, щоб зберегти правильне значення
+                    {
+                        this.weight = (short)value; // Записуємо в поле з МАЛЕНЬКОЇ літери
+                    }
             }
         }
     }

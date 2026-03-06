@@ -91,6 +91,18 @@ namespace CSharplearning
             Console.WriteLine(Botosu.Width); // бо get is publiv
             Console.WriteLine($"This is not courect value of weight: {Botosu.Weight}, try again");
 
+            RobotOOPKilljoy qwerty = new RobotOOPKilljoy();
+
+            qwerty.printValues();  // has access
+
+            qwerty.Damage = 20;
+            Console.WriteLine(qwerty.Damage);
+
+            //Killer.Damage();  бо батько не наслідує
+
+
+            RobotOOPKilljoy type_5 = new RobotOOPKilljoy("TYPE_5", 300, 15000, 8.0F, new byte[] { 221, 34, 245 }, 15000);
+            type_5.Lazer();
         }
     }
 };
