@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq.Expressions;
 using CSharplearning;
+using System.Collections.Generic;
 
 namespace CSharplearning
 {
@@ -43,16 +44,16 @@ namespace CSharplearning
 
 
 
-            Console.WriteLine("Тема 11: OOP");
+            //Console.WriteLine("Тема 11: OOP");
 
-            RobotOOP Bot = new RobotOOP("Bot", 250, 1500, 2.0F, new byte[] { 0, 0, 0 });
+            //RobotOOP Bot = new RobotOOP("Bot", 250, 1500, 2.0F, new byte[] { 0, 0, 0 });
             //Bot.SetValues("Bot", 250, 1500, 2.0F, new byte[] { 0, 0, 0 });  // for private - треба юзати функції для того класу    також через конструктор
             //Bot.name = "Bot";
             //Bot.weight = 250;
             //Bot.power = 1500;
             //Bot.version = 2.0F;
             //Bot.coordinates = new byte[] {0,0,0};
-                                                            //public - Бо легко будь де можна доступитися
+            //public - Бо легко будь де можна доступитися
             //Console.WriteLine("Name: " + Bot.name);
             //Console.WriteLine("Weight: " + Bot.weight);
             //Console.WriteLine("Version: " + Bot.version);
@@ -61,7 +62,7 @@ namespace CSharplearning
             //Bot.printValues(); - не потрібне через контруктор
 
 
-            RobotOOP Killer = new RobotOOP("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 });
+            //RobotOOP Killer = new RobotOOP("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 });
             //Killer.SetValues("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 });   // for private - треба юзати функції для того класу   також через конструктор для зручності
             //Killer.name = "Killer";
             //Killer.weight = 300;
@@ -76,33 +77,58 @@ namespace CSharplearning
 
             //Killer.printValues();  - не потрібне через контруктор
 
-            RobotOOP Adrian = new RobotOOP();
+            //RobotOOP Adrian = new RobotOOP();
 
-            RobotOOP.value = 15;
-            Console.WriteLine(RobotOOP.value);
+            //RobotOOP.value = 15;
+            //Console.WriteLine(RobotOOP.value);
 
-            RobotOOP.PrintSOmeText();
+            //RobotOOP.PrintSOmeText();
 
-            RobotOOP.PrintCount();
+            //RobotOOP.PrintCount();
 
-            RobotOOP Botosu = new RobotOOP();
-            Botosu.Weight = -3;
-            //Botosu.Width = 135; // помилка бо set є private
-            Console.WriteLine(Botosu.Width); // бо get is publiv
-            Console.WriteLine($"This is not courect value of weight: {Botosu.Weight}, try again");
+            //RobotOOP Botosu = new RobotOOP();
+            //Botosu.Weight = -3;
+            ////Botosu.Width = 135; // помилка бо set є private
+            //Console.WriteLine(Botosu.Width); // бо get is publiv
+            //Console.WriteLine($"This is not courect value of weight: {Botosu.Weight}, try again");
 
-            RobotOOPKilljoy qwerty = new RobotOOPKilljoy();
+            //RobotOOPKilljoy qwerty = new RobotOOPKilljoy();
 
-            qwerty.printValues();  // has access
+            //qwerty.printValues();  // has access
 
-            qwerty.Damage = 20;
-            Console.WriteLine(qwerty.Damage);
+            //qwerty.Damage = 20;
+            //Console.WriteLine(qwerty.Damage);
 
-            //Killer.Damage();  бо батько не наслідує
+            ////Killer.Damage();  бо батько не наслідує
 
 
-            RobotOOPKilljoy type_5 = new RobotOOPKilljoy("TYPE_5", 300, 15000, 8.0F, new byte[] { 221, 34, 245 }, 15000);
-            type_5.Lazer();
+            //RobotOOPKilljoy type_5 = new RobotOOPKilljoy("TYPE_5", 300, 15000, 8.0F, new byte[] { 221, 34, 245 }, 15000);
+            //type_5.Lazer();
+
+            RobotOOP Adolf = new RobotOOP("Adolf");
+            RobotOOPKilljoy Killer = new RobotOOPKilljoy("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 }, 25000);
+
+
+            //RobotOOP[] wert = new RobotOOP[] {
+            //    Adolf, Killer, new RobotOOP()
+            //};
+
+            List<RobotOOP> bots = new List<RobotOOP>();
+            {
+                bots.Add(new RobotOOP("Alex"));
+                bots.Add(Adolf);
+                bots.Add(Killer);
+
+                RobotOOPKilljoy Killer1 = null;
+                foreach(RobotOOP el in bots)
+                {
+                    if (el.Name == "Killer") {
+                        Killer1 = el as RobotOOPKilljoy;
+                        Killer1.Lazer();
+                    }
+                    Console.WriteLine(el is RobotOOPKilljoy);
+                }
+            }
         }
     }
 };

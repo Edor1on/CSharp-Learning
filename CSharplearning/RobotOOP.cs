@@ -12,6 +12,7 @@ namespace CSharplearning
         private byte[] coordinates;
 
 
+        public string Name { get { return name; } private set {  } }
         // constructor
 
         public RobotOOP() { count++; }
