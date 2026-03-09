@@ -18,9 +18,21 @@ namespace CSharplearning
         }
 
 
+        public override void Moving(int speed)
+        {
+            Console.WriteLine("MOOOOOOVING");
+        }
+
+
         public void Lazer()
         {
             Console.WriteLine("Shooting from lazer");
+        }
+
+        public override void printValues()
+        {
+            base.printValues();
+            Console.WriteLine("Damage: " + Damage);
         }
     }
 }

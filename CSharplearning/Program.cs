@@ -105,30 +105,44 @@ namespace CSharplearning
             //RobotOOPKilljoy type_5 = new RobotOOPKilljoy("TYPE_5", 300, 15000, 8.0F, new byte[] { 221, 34, 245 }, 15000);
             //type_5.Lazer();
 
-            RobotOOP Adolf = new RobotOOP("Adolf");
-            RobotOOPKilljoy Killer = new RobotOOPKilljoy("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 }, 25000);
+            //RobotOOP Adolf = new RobotOOP("Adolf");
+            //RobotOOPKilljoy Killer = new RobotOOPKilljoy("Killer", 300, 15000, 8.0F, new byte[] { 2, 2, 245 }, 25000);
 
 
-            //RobotOOP[] wert = new RobotOOP[] {
-            //    Adolf, Killer, new RobotOOP()
-            //};
+            ////RobotOOP[] wert = new RobotOOP[] {
+            ////    Adolf, Killer, new RobotOOP()
+            ////};
 
-            List<RobotOOP> bots = new List<RobotOOP>();
-            {
-                bots.Add(new RobotOOP("Alex"));
-                bots.Add(Adolf);
-                bots.Add(Killer);
+            //List<RobotOOP> bots = new List<RobotOOP>();
+            //{
+            //    bots.Add(new RobotOOP("Alex"));
+            //    bots.Add(Adolf);
+            //    bots.Add(Killer);
 
-                RobotOOPKilljoy Killer1 = null;
-                foreach(RobotOOP el in bots)
-                {
-                    if (el.Name == "Killer") {
-                        Killer1 = el as RobotOOPKilljoy;
-                        Killer1.Lazer();
-                    }
-                    Console.WriteLine(el is RobotOOPKilljoy);
-                }
-            }
+            //    RobotOOPKilljoy Killer1 = null;
+            //    foreach(RobotOOP el in bots)
+            //    {
+            //        if (el.Name == "Killer") {
+            //            Killer1 = el as RobotOOPKilljoy;
+            //            Killer1.Lazer();
+            //        }
+            //        Console.WriteLine(el is RobotOOPKilljoy);
+            //}
+            //}
+
+
+            BotOOP Sergey = new BotOOP("Sergey", 5, 123, 1.5F, new byte[] { 2, 123, 245 });
+            Sergey.Moving(204);
+
+            RobotOOPKilljoy Killercity = new RobotOOPKilljoy("Killerqqq", 300, 15000, 8.0F, new byte[] { 2, 2, 245 }, 25000);
+            Killercity.printValues();
+            Killercity.Moving(12875);
+
+            //RobotOOP ASD = new RobotOOP();   помилка бо абстрактний клас
+
+
+
+
         }
     }
 };

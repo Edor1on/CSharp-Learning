@@ -3,7 +3,7 @@ using System.Xml.Linq;
 
 namespace CSharplearning
 {
-    class RobotOOP
+    abstract class RobotOOP
     {
         private string name;
         private short weight;
@@ -59,7 +59,7 @@ namespace CSharplearning
             this.coordinates = coordinates;
         }
 
-        public void printValues()
+        public virtual void printValues()
         {
             Console.WriteLine(this.name + ": weight: " + this.weight + ", power: " + this.power + ", version " + this.version + ", coordinates: ");
             foreach(byte el in this.coordinates){
@@ -68,6 +68,8 @@ namespace CSharplearning
         Console.WriteLine("");
 
         }
+
+        public abstract void Moving(int speed);
 
 
         // Аксесори get set
